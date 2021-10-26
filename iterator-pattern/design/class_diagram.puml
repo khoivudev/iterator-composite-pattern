@@ -1,0 +1,33 @@
+@startuml
+interface Iterator {
+    hasNext()
+    next()
+}
+
+class PancakeHouseMenuIterator implements Iterator {
+    hasNext()
+    next()
+}
+
+class DinerMenuIterator implements Iterator {
+    hasNext()
+    next()
+}
+
+class DinerMenu {
+    menuItems
+    createIterator()
+}
+
+class PancakeHouseMenu {
+    menuItems
+    createIterator()
+}
+
+DinerMenu --> DinerMenuIterator
+PancakeHouseMenu --> PancakeHouseMenuIterator
+
+Waitress --> DinerMenu
+Waitress --> PancakeHouseMenu
+Waitress --> Iterator
+@enduml
