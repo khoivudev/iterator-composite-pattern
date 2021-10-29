@@ -2,32 +2,28 @@
 interface Iterator {
     hasNext()
     next()
-}
-
-class PancakeHouseMenuIterator implements Iterator {
-    hasNext()
-    next()
+    remove()
 }
 
 class DinerMenuIterator implements Iterator {
     hasNext()
     next()
+    remove()
 }
 
-class DinerMenu {
+class DinerMenu implements Menu {
     menuItems
     createIterator()
 }
 
-class PancakeHouseMenu {
+class PancakeHouseMenu implements Menu {
     menuItems
     createIterator()
 }
 
 DinerMenu --> DinerMenuIterator
-PancakeHouseMenu --> PancakeHouseMenuIterator
+PancakeHouseMenu --> Iterator
 
-Waitress --> DinerMenu
-Waitress --> PancakeHouseMenu
+Waitress --> Menu
 Waitress --> Iterator
 @enduml

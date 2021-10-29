@@ -1,4 +1,6 @@
-public class DinerMenu {
+import java.util.Iterator;
+
+public class DinerMenu implements Menu {
     static final int MAX_ITEMS = 6;
     int numberOffItems = 0;
     MenuItem[] menuItems;
@@ -6,9 +8,9 @@ public class DinerMenu {
     public DinerMenu() {
         menuItems = new MenuItem[MAX_ITEMS];
 
-        addItem("K&B Pancake Breakfast", "Pancakes with scrambled eggs, and toast", true, 2.99);
-        addItem("Regular Pancake Breakfast", "Pancakes with fried eggs, and sausage", false, 2.99);
-        addItem("Blueberry Pancakes", "Pancakes made with fresh blueberries", true, 3.49);
+        addItem("K&B Pancake Lunch", "Pancakes with scrambled eggs, and toast", true, 2.99);
+        addItem("Regular Pancake Lunch", "Pancakes with fried eggs, and sausage", false, 2.99);
+        addItem("Blueberry Lunch", "Pancakes made with fresh blueberries", true, 3.49);
         addItem("Waffles","Waffles, with your choice of blueberries of strawberries", true, 3.59);
     }
 
@@ -22,7 +24,7 @@ public class DinerMenu {
         }
     }
 
-    public Iterator createIterator() {
+    public Iterator<MenuItem> createIterator() {
         return new DinerMenuIterator(menuItems);
     }
 }
