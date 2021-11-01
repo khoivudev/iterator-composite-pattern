@@ -1,3 +1,5 @@
+import java.util.Iterator;
+
 public abstract class MenuComponent {
     //Composite Method
     public void add(MenuComponent menuComponent) {
@@ -26,4 +28,9 @@ public abstract class MenuComponent {
     public void print() {
         throw new UnsupportedOperationException();
     }
+
+    //Iterator
+    public Iterator<MenuComponent> createIterator() {
+        throw new UnsupportedOperationException();
+    };
 }

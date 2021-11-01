@@ -3,4 +3,4 @@
 + Composite lets clients treat **individual objects** and **compositions of objects** uniformly.
 
 ### Class Diagram
-![alt_image](/iterator-pattern/design/composite-pattern.png)
+![alt_image](/composite-pattern/design/composite-pattern.png)
